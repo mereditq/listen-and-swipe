@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {useLocation, useHistory} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 import {Stack, Direction} from 'swing';
 import SongCard from './SongCard';
 import Conclusion from './Conclusion';
@@ -15,7 +15,7 @@ const SwipingPage = () => {
     const [artistInformation, setArtistInformation] = useState(null);
     const [songArray, setSongArray] = useState(null);
     const [likedSongs, setLikedSongs] = useState([]);
-    let history = useHistory();
+    let navigate = useNavigate();
     const stack = Stack();
 
     stack.on('throwout', (event) => {
@@ -98,7 +98,7 @@ const SwipingPage = () => {
                 console.error(err);
                 // If the token expires, redirect to the login page
                 if (err.statusText === 'Unauthorized') {
-                    history.push('/')
+                    navigate('/')
                 }
             }
         );
