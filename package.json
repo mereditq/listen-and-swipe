@@ -1,7 +1,7 @@
 {
   "name": "listen-and-swipe",
   "version": "0.1.0",
-  "homepage": "https://mereditq.github.io/listen-and-swipe/",
+  "homepage": "https://listen-and-swipe.herokuapp.com",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^2.2.8",
