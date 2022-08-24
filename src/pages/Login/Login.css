@@ -9,20 +9,10 @@
 
 .login-card { 
 
-    overflow: auto;
     height: 60vh;
     width: 40vw;
     
-    border-radius: 25px;
-    padding: 20px;
-    box-shadow: 0px 0px 25px 5px black;
-
-    background: linear-gradient(270deg, #64d53a, #fd297b);
-    background-size: 400% 400%;
-
-    -webkit-animation: title-card 40s ease infinite;
-    -moz-animation: title-card 40s ease infinite;
-    animation: title-card 40s ease infinite;
+    background:#ABC9CD;
 
 }
 
@@ -51,39 +41,21 @@ p {
 
 .landing-page-title {
     
-    color: rgba(250, 241, 241, 0.904);
-    font-size: 50px;
-    padding: 20px 20px 5px 20px;
-    font-family: 'Leckerli One', cursive;
-
-}
-
-button {
-
-    border: none;
-    border-radius: 20px;
-    height: 60px;
-    width: 250px;
-    box-shadow: 0px 0px 10px 2px rgb(0, 0, 0);
-    
-
-    background-color: #38b457;
-    
+    color: rgba(0, 0, 0, 0.904);
     font-size: 20px;
-    font-weight: 600;
-    color: rgba(250, 241, 241, 0.904);
-    font-family: 'Unica One', cursive;
-    
-    transition: background-color 550ms, color 250ms;
+    /* font-size:2.5vw; */
+    font-family: 'Arima Madurai', 'Lato', 'Verdana', 'Sans-Serif';
+    font-weight: bold;
 
 }
 
-#pitch{
+.pitch{
 
-    padding: 10px 30px 30px 30px;
-    font-size: 13pt;
+  
+    font-size: 15px;
     color: rgba(32, 30, 30, 0.904);
-    font-family: 'Unica One', cursive;
+    font-family: 'Arima Madurai', 'Verdana', 'Lato', 'Sans-Serif';
+    font-weight: medium;
 
 }
 
@@ -91,11 +63,5 @@ button {
     
     height: 40px;
     width: 40px;
-
-}
-
-button:hover{
-
-    background-color: #298148;
 
 }

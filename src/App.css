@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+body > #root > div {
+  height: 100vh;
+}
