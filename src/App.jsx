@@ -5,19 +5,23 @@ import SwipingPage from './pages/SwipingPage/SwipingPage.jsx';
 import About from './pages/About/About.jsx';
 
 import {Box, ChakraProvider} from '@chakra-ui/react';
+import Navbar from './components/NavBar';
 
 function App() {
 	return (
 		<ChakraProvider bgGradient={"linear(to-b, #658E93, #AFC3C6)"}>
 			<Box bgGradient={"linear(to-b, #658E93, #AFC3C6)"}>
+			{/* // "start": "serve -s build", */}
 				
 			<Router basename={process.env.PUBLIC_URL}>
+				<Navbar/>
 				<Routes>
 					<Route path='/app' element={<SwipingPage/>}/>
 					<Route path='/about' element={<About/>}/>
 					<Route path='/' element={<Login/>}/>
 						
 				</Routes>
+				
 			</Router>
 			
 			</Box>

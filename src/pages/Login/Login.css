@@ -1,3 +1,6 @@
+
+@import "../../assets/fonts.css";
+
 .login--wrapper{
     
     display: grid;
@@ -51,7 +54,6 @@ p {
 
 .pitch{
 
-  
     font-size: 15px;
     color: rgba(32, 30, 30, 0.904);
     font-family: 'Arima Madurai', 'Verdana', 'Lato', 'Sans-Serif';
@@ -64,4 +66,9 @@ p {
     height: 40px;
     width: 40px;
 
+}
+
+.spotify-button {
+    font-family: 'Arima Madurai';
+    font-weight: medium;
 }

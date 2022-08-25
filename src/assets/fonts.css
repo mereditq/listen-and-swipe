@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Arima Madurai';
+    font-weight: bold;
+    src: url(./fonts/ArimaMadurai-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Arima Madurai';
+    font-weight: normal;
+    src: url(./fonts/ArimaMadurai-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Arima Madurai';
+    font-weight: medium;
+    src: url(./fonts/ArimaMadurai-Medium.ttf);
+}
