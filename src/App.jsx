@@ -15,7 +15,7 @@ function App() {
 			{/* // "start": "serve -s build", */}
 			
 			<Router basename={process.env.PUBLIC_URL}>
-				<Navbar/>
+				<Navbar />
 				<GridItem rowSpan={9}>
 				<Routes>
 					<Route path='/app' element={<SwipingPage/>}/>

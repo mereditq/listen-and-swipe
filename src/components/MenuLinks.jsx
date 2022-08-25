@@ -8,9 +8,12 @@ const MenuItem = ({children, isLast, to="/", ...rest}) => {
    return (
     <Link href={to}>
       <Text
-       fontFamily={["Arima Madurai", "Lato", "Verdana", "sans-serif"]}
+       fontFamily={["Arima Madurai"]}
        display="block"
-       textColor={'black'} {...rest}>
+       textColor={'black'}
+       fontWeight={'bold'} 
+       fontSize={'2xl'}
+       {...rest}>
         {children}
       </Text>
     </Link>
@@ -21,7 +24,7 @@ const MenuItem = ({children, isLast, to="/", ...rest}) => {
 const MenuLinks = ({isOpen}) => {
   return (
     <Box
-      mr={4}
+      mr={10}
       display = {{base: isOpen ? "block":"none", md:"block"}}
       flexBasis={{base:"100%", md:"auto"}}>
         <Stack

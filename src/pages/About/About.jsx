@@ -1,10 +1,10 @@
 import './About.css';
-import {Container, Link, Center, Text,  Grid, GridItem} from '@chakra-ui/react';
+import {Container, Link, Center, Text,  Grid, GridItem, Spacer} from '@chakra-ui/react';
 
 const About = () => {
 
     return (
-        <Center h={'100vh'} >
+        <Center h="90vh" >
         <Container
                 borderBottomWidth={'6px'}
                 borderRight={'8px'}
@@ -21,7 +21,7 @@ const About = () => {
                 >
             <Grid
                 
-                templateRows='repeat(4, 1fr)'
+                templateRows='repeat(6, 1fr)'
                 templateColumns='repeat(5, 1fr)'
                 gap={4}
                 
@@ -32,7 +32,7 @@ const About = () => {
                 </GridItem>
                 
                 
-                <GridItem colSpan={5} rowSpan={3} ml={5} marginRight={5}> 
+                <GridItem colSpan={5} rowSpan={5} ml={5} marginRight={5}> 
                     <Text class="pitch">
                     Listen & Swipe is a web application that uses a user’s Spotify account to suggest songs to the user. After logging into Spotify, the user will be given a set of suggested songs displayed in a card format. If they like the song, they can swipe right on the card, otherwise they can swipe left, similar to Tinder. At the end of the list of songs, they can see the songs they liked compiled in a list. 
 
@@ -40,8 +40,11 @@ const About = () => {
                     <Text class="pitch">
                         Created originally by Meredith & Bashmi, and integrated into a CI/CD pipeline with the help of Deepti and Greg!
                     </Text>
-                    <Link src={'https://devpost.com/software/listen-swipe'}>Winner of ZotHacks 2020!</Link>
-                    <Link>See Medium Article Here (TBA)</Link>
+                    <a href="https://devpost.com/software/listen-swipe"><Text color={'#298EC7'} fontFamily={['Arima Madurai', 'Verdana', 'Lato', 'Sans-Serif']} fontWeight={'medium'}>Winner of ZotHacks 2020!</Text></a>
+                    
+                    
+
+                    <a><Text color={'#298EC7'} fontFamily={['Arima Madurai', 'Verdana', 'Lato', 'Sans-Serif']} fontWeight={'medium'}>See Medium Article Here (TBA)</Text></a>
                 </GridItem>
         
             </Grid>
