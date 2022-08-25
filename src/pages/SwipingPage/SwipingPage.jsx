@@ -3,9 +3,11 @@ import {useLocation, useNavigate} from 'react-router-dom';
 import {Stack, Direction} from 'swing';
 import SongCard from './SongCard';
 import Conclusion from './Conclusion';
-import CheckMark from './images/green_check.png';
-import XMark from './images/x_cross.png';
+import {BiHeartCircle} from 'react-icons/bi';
+import {FaTimesCircle} from 'react-icons/fa';
+import {IoMdCloseCircleOutline} from 'react-icons/io';
 import './SwipingPage.css';
+import { Center,Flex, Grid, GridItem } from '@chakra-ui/react';
 
 let SpotifyWebApi = require('spotify-web-api-js');
 let spotifyApi = new SpotifyWebApi();
@@ -114,23 +116,38 @@ const SwipingPage = () => {
     if(songArray === null) return (<div></div>);
     if(songArray === 'empty') return (<div >You have no playlists! Create one on spotify to use the app!</div>);
     return (
-        <div className="swiping-page--wrapper">
-            <img id = "check-mark" src={CheckMark} alt="green check mark"></img>
-            <img id = "x-cross" src={XMark} alt="red x mark"></img>
+        <Grid h={'60vw'} templateColumns='repeat(3,1fr)'
+        placeContent='center'>
+            <GridItem justifyContent={'center'} alignContent={'center'}>
+                <Flex justifyContent={'center'} alignContent={'center'}>
+                    <IoMdCloseCircleOutline size={90} color='#CE3333'/>
+                </Flex>
+            </GridItem>
+            <Center>
             <div className="viewport">
 
-				<ul className="stack">
-					{songArray.map(function(songInfo){
-						return (
+                <ul className="stack">
+                    {songArray.map(function(songInfo){
+                        return (
                             <SongCard stack={stack} songInfo={songInfo} />
-						)
-					})}
-				</ul>
-			</div>
+                        )
+                    })}
+                </ul>
+            </div>
+            </Center>
+            
+            
+
+            <GridItem>
+                <Center>
+                    <BiHeartCircle color='#45954C' size={100}/>
+                </Center>
+            </GridItem>
             {songArray?.length === 0 && <Conclusion likedSongs={likedSongs} spotifyApi={spotifyApi}/>}
-        </div>
+        </Grid>
+    
     )
-}
+} 
 // HOW TO DEPLOY TO GITHUB PAGES
 // https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
 export default SwipingPage;

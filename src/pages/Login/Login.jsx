@@ -51,7 +51,7 @@ const Login = () => {
                                 </HStack>
                                 
                             
-                            <GridItem minW="20vw" w="20vw">
+                            <GridItem minW="20vw" w="20vw" maxW="280px">
                                 <Text class="landing-page-title"> <Center>Listen & Swipe </Center></Text>
                             </GridItem>
                             
