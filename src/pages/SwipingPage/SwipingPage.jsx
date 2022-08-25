@@ -117,11 +117,12 @@ const SwipingPage = () => {
     if(songArray === 'empty') return (<div >You have no playlists! Create one on spotify to use the app!</div>);
     return (
         
-        <Grid h="100%" display={'flex'} templateColumns='repeat(3,1fr)'
+        <Grid h="100%"  templateColumns='repeat(3,1fr)'
         placeContent='center'>
             
             <GridItem justifyContent={'center'} alignContent={'center'}>
-                <Grid templateRows='repeat(3,1fr)'>
+                <Grid templateRows='repeat(3,1fr)'
+                h="100%">
                 <GridItem></GridItem>
                     <Flex justifyContent={'center'} alignContent={'center'}>
                         <IoMdCloseCircleOutline size={90} color='#CE3333'/>
@@ -145,7 +146,8 @@ const SwipingPage = () => {
             
 
             <GridItem>
-                <Grid templateRows='repeat(3,1fr)'>
+                <Grid templateRows='repeat(3,1fr)'
+                h="100%">
                     <GridItem></GridItem>
                 <Center>
                     <BiHeartCircle color='#45954C' size={100}/>
