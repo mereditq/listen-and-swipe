@@ -7,7 +7,7 @@ import {BiHeartCircle} from 'react-icons/bi';
 import {FaTimesCircle} from 'react-icons/fa';
 import {IoMdCloseCircleOutline} from 'react-icons/io';
 import './SwipingPage.css';
-import { Center,Flex, Grid, GridItem } from '@chakra-ui/react';
+import { Center,Flex, Grid, GridItem, Spacer } from '@chakra-ui/react';
 
 let SpotifyWebApi = require('spotify-web-api-js');
 let spotifyApi = new SpotifyWebApi();
@@ -116,12 +116,18 @@ const SwipingPage = () => {
     if(songArray === null) return (<div></div>);
     if(songArray === 'empty') return (<div >You have no playlists! Create one on spotify to use the app!</div>);
     return (
-        <Grid h={'60vw'} templateColumns='repeat(3,1fr)'
+        
+        <Grid h="100%" display={'flex'} templateColumns='repeat(3,1fr)'
         placeContent='center'>
+            
             <GridItem justifyContent={'center'} alignContent={'center'}>
-                <Flex justifyContent={'center'} alignContent={'center'}>
-                    <IoMdCloseCircleOutline size={90} color='#CE3333'/>
-                </Flex>
+                <Grid templateRows='repeat(3,1fr)'>
+                <GridItem></GridItem>
+                    <Flex justifyContent={'center'} alignContent={'center'}>
+                        <IoMdCloseCircleOutline size={90} color='#CE3333'/>
+                    </Flex>
+                    <GridItem></GridItem>
+                </Grid>
             </GridItem>
             <Center>
             <div className="viewport">
@@ -139,13 +145,17 @@ const SwipingPage = () => {
             
 
             <GridItem>
+                <Grid templateRows='repeat(3,1fr)'>
+                    <GridItem></GridItem>
                 <Center>
                     <BiHeartCircle color='#45954C' size={100}/>
                 </Center>
+                <GridItem></GridItem>
+                </Grid>
             </GridItem>
             {songArray?.length === 0 && <Conclusion likedSongs={likedSongs} spotifyApi={spotifyApi}/>}
         </Grid>
-    
+        
     )
 } 
 // HOW TO DEPLOY TO GITHUB PAGES

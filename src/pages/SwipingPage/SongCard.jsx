@@ -40,14 +40,17 @@ const SongCard = ({stack, songInfo}) => {
                         templateRows='repeat(5, 1fr)'
                         templateColumns='repeat(1,1fr)'
                         gap={4}>
-                            <GridItem h='50' rowSpan={1} colSpan={1}>
+                            <GridItem h='50' rowSpan={1} colSpan={1} display={'flex'}
+                             placeContent={'center'} maxH='100'>
                                 <Center>
                                     <Text
                                         fontFamily={'Lato'}
-                                        fontSize={'xl'}
-                                        top="50%"
-                                        left="50%"
-                                        transform="translateY(-50%, -50%)">
+                                        fontSize={'md'}
+                                        fontWeight={'bold'}
+                                        lineHeight={'md'}
+                                        noOfLines={1}
+                                        isTruncated
+                                        >
                                             {songInfo.name}
                                     </Text>
                                 </Center>
@@ -71,9 +74,12 @@ const SongCard = ({stack, songInfo}) => {
                                     >
                                 <Text noOfLines={2}>{artists.map(artist => {
                                                         return (
-                                                            <div class ="album" id ="artists">
+                                                            <Text
+                                                                fontFamily={'Lato'} 
+                                                                fontSize={'md'}>
                                                                 {artist.name}
-                                                            </div>
+                                                            </Text>
+                                                            
                                                         );
                                                     })}
                                 </Text>

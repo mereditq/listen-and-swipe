@@ -35,11 +35,10 @@ const Login = () => {
                 templateRows='repeat(5, 1fr)'
                 templateColumns='repeat(5, 1fr)'
                 gap={4}
-                
                 >
                     
                 <GridItem colSpan={5} rowSpan={1} borderBottomWidth={'2px'} borderBottomColor={'black'}
-                    h='50'        > 
+                    h='50' > 
                     <Grid
                         templateColumns={'repeat(3,1fr)'} gap={6}
                         >
