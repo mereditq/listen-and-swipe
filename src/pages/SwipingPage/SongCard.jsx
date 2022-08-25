@@ -21,6 +21,7 @@ const SongCard = ({stack, songInfo}) => {
     }, [cardRef, stack]);
 
     return (
+        
             <li ref={cardRef} id={songInfo.id}>
             <Container
                 borderBottomWidth={'6px'}
@@ -101,6 +102,7 @@ const SongCard = ({stack, songInfo}) => {
                         </Grid>
                 </Container>
             </li>
+            
     )
 }
 

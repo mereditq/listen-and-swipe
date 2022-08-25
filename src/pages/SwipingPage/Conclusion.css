@@ -4,6 +4,13 @@ p {
 
 }
 
+.conc-page{
+    background: linear-gradient(270deg, #ff655b, #ff4c6a, #f8708f, #80c260, #50cfbd, #c650cf);
+	background-size: 400% 400%;
+	animation: gradient 35s ease infinite;
+	height: 100vh;
+}
+
 .center-title{
     font-size:70px;
     width: 100%;
@@ -49,26 +56,39 @@ p {
     
     transform: translate(-50%, -50%);
     background: linear-gradient(270deg, #ff655b, #ff4c6a, #f8708f, #80c260, #50cfbd, #c650cf);
-    background-size: 1200% 1200%;
-
-    -webkit-animation: AnimationName 36s ease infinite;
-    -moz-animation: AnimationName 36s ease infinite;
-    animation: AnimationName 36s ease infinite;
-
+	background-size: 400% 400%;
+	animation: gradient 35s ease infinite;
+	height: 100vh;
 }
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

@@ -117,22 +117,24 @@ const SwipingPage = () => {
     if(songArray === 'empty') return (<div >You have no playlists! Create one on spotify to use the app!</div>);
     return (
         
-        <Grid h="100%"  templateColumns='repeat(3,1fr)'
+        <Grid h="100%"  templateColumns='repeat(3,1fr)' templateRows='repeat(1,1fr)'
         placeContent='center'>
             
             <GridItem justifyContent={'center'} alignContent={'center'}>
                 <Grid templateRows='repeat(3,1fr)'
                 h="100%">
                 <GridItem></GridItem>
-                    <Flex justifyContent={'center'} alignContent={'center'}>
+                <Flex justifyContent={'center'} alignContent={'center'}>
                         <IoMdCloseCircleOutline size={90} color='#CE3333'/>
-                    </Flex>
-                    <GridItem></GridItem>
+                </Flex>
+                <GridItem></GridItem>
                 </Grid>
             </GridItem>
             <Center>
-            <div className="viewport">
-
+            <div className="viewport"
+                
+                >
+                <Center>
                 <ul className="stack">
                     {songArray.map(function(songInfo){
                         return (
@@ -140,6 +142,7 @@ const SwipingPage = () => {
                         )
                     })}
                 </ul>
+                </Center>
             </div>
             </Center>
             
@@ -149,9 +152,10 @@ const SwipingPage = () => {
                 <Grid templateRows='repeat(3,1fr)'
                 h="100%">
                     <GridItem></GridItem>
-                <Center>
-                    <BiHeartCircle color='#45954C' size={100}/>
-                </Center>
+                    
+                    <Flex justifyContent={'center'} alignContent={'center'}>
+                        <BiHeartCircle color='#45954C' size={100}/>
+                    </Flex>
                 <GridItem></GridItem>
                 </Grid>
             </GridItem>

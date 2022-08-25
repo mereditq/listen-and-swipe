@@ -78,9 +78,7 @@ img.avatar{
     
     padding: 40px;
     width: 500px; 
-    height: 500px;
-    
- 
+    height: 100%;
     position: relative;
     place-content: center;
 
@@ -93,7 +91,7 @@ img.avatar{
     height: auto; 
     list-style: none; 
     
-    
+    margin-top:10vh;    
     position: absolute;
     margin-left: auto;
     margin-right: auto;

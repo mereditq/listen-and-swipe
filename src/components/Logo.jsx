@@ -7,7 +7,7 @@ export default function Logo(props) {
   return (
     <Box {...props}>
       <Text fontSize="md" fontFamily={['Arima Madurai', 'Lato', 'Verdana', 'sans-serif']} fontWeight="bold">
-        Listen & Swipe
+        
       </Text>
     </Box>
   )

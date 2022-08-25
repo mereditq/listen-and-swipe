@@ -37,7 +37,7 @@ const About = () => {
                         This is the About Page!
                         Will fill in more Later
 
-                        Made by Meredith, Deepti, and Greg :D
+                        Made by Meredith, Bashmi, Deepti, and Greg :D
 
                     </Text>
                 </GridItem>
