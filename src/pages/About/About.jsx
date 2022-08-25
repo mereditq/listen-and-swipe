@@ -1,5 +1,5 @@
 import './About.css';
-import {Container, Center, Text,  Grid, GridItem} from '@chakra-ui/react';
+import {Container, Link, Center, Text,  Grid, GridItem} from '@chakra-ui/react';
 
 const About = () => {
 
