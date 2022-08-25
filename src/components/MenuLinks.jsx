@@ -9,7 +9,8 @@ const MenuItem = ({children, isLast, to="/", ...rest}) => {
     <Link href={to}>
       <Text
        fontFamily={["Arima Madurai", "Lato", "Verdana", "sans-serif"]}
-       display="block" {...rest}>
+       display="block"
+       textColor={'black'} {...rest}>
         {children}
       </Text>
     </Link>
