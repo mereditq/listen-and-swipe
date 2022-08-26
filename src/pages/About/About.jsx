@@ -33,7 +33,7 @@ const About = () => {
                 
                 
                 <GridItem colSpan={5} rowSpan={5} ml={5} marginRight={5}> 
-                    {/* <Text class="pitch"> Hello Viewers !!</Text> */}
+                     <Text class="pitch"> Hello music lovers !!</Text> 
                     <Text class="pitch">
                     Listen & Swipe is a web application that uses a user’s Spotify account to suggest songs to the user. After logging into Spotify, the user will be given a set of suggested songs displayed in a card format. If they like the song, they can swipe right on the card, otherwise they can swipe left, similar to Tinder. At the end of the list of songs, they can see the songs they liked compiled in a list. 
 
